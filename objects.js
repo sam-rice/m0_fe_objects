@@ -5,7 +5,7 @@
 // the desired result. To check your work, run this
 // file in your Terminal.
 
-foods = {
+var foods = {
   apples: 23,
   grapes: 507,
   eggs: 48
@@ -23,16 +23,19 @@ console.log(Object.values(foods));
 
 // Write code that prints the value of the second food of the foods variable
 // you created above:
-// YOUR CODE HERE
+
+console.log(foods.grapes);
 
 // Write code that adds a food to the foods object.
 // Then, print the updated object:
-// YOUR CODE HERE
 
+foods.pies = 4;
 
-#-------------------
+console.log(foods.pies);
+
+// #-------------------
 // Part 2: Email
-#-------------------
+// #-------------------
 
 
 // Think about all the pieces of information associated with one single email in your inbox.
@@ -43,19 +46,33 @@ console.log(Object.values(foods));
 
 // Write code that logs your email object to the terminal.
 
+var email555 = {
+  senderName: "Doe, John",
+  senderAddress: "johndoe@gmail.com",
+  time: "2022-05-01::13::05::13",
+  subject: "Reconnecting",
+  read: true,
+  replied: false,
+  ccRecipients: ["alexsmith@gmail.com", "janetsmith@gmail.com"],
+  body: "This is the email's text."
+}
+
+console.log(email555);
 
 // Write code that logs all of the 'keys' of the email object
 // you created above:
-// YOUR CODE HERE
+
+console.log(Object.keys(email555));
 
 // Write code that logs all of the 'values' of the email object
 // you created above:
-// YOUR CODE HERE
+
+console.log(Object.values(email555));
 
 
-#-------------------
+// #-------------------
 // Part 3: Many Emails - CHALLENGE!
-#-------------------
+// #-------------------
 
 // LONG EXAMPLE:
 // Now that we've learned about Objects AND Arrays, we can combine them.
@@ -63,7 +80,7 @@ console.log(Object.values(foods));
 // Check out the following example of an array of Instagram posts:
 
 
-posts = ["image at beach", "holiday party", "adorable puppy", "video of cute baby"];
+var posts = ["image at beach", "holiday party", "adorable puppy", "video of cute baby"];
 
 
 // An Array of Objects is probably more realistic. Objects are a data type that's great
@@ -71,7 +88,7 @@ posts = ["image at beach", "holiday party", "adorable puppy", "video of cute bab
 // that relate to each individual Instagram post:
 
 
-posts = [
+var posts = [
   {
     imageSrc: "./images/beach.png",
     caption: "At the beach with my besties",
@@ -101,3 +118,45 @@ console.log(posts[0]);
 // YOU DO: Create an array of at least 3 EMAIL Objects, using the same
 // key-value pairs you used in your email Object above.
 // Then, print the email Array to the Terminal.
+
+
+var emails = [
+  {
+    senderName: "Doe, John",
+    senderAddress: "johndoe@gmail.com",
+    time: "2022-05-01::13::05::13",
+    subject: "Reconnecting",
+    read: true,
+    replied: false,
+    ccRecipients: ["alexsmith@gmail.com", "janetsmith@gmail.com"],
+    body: "This is the email's text."
+  },
+  {
+    senderName: "Smith, Jess",
+    senderAddress: "jesssmith@gmail.com",
+    time: "2012-03-04::10::35::53",
+    subject: "Grocery List",
+    read: true,
+    replied: true,
+    ccRecipients: [],
+    body: "Here's my grocery list:"
+  },
+  {
+    senderName: "Hal, Roberts",
+    senderAddress: "halroberts@gmail.com",
+    time: "2022-01-01::11::03::00",
+    subject: "Happy New Years!",
+    read: false,
+    replied: false,
+    ccRecipients: ["johndoe@gmail.com",],
+    body: "Happy New Years!"
+  }
+];
+
+console.log(emails);
+
+console.log(emails[1]);
+
+emails[2].read = true
+
+console.log(emails[2]);
